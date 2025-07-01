@@ -57,3 +57,11 @@ void functionScreen0() { // Заствка для демонстраційної
   display.drawBitmap(0, 0, IMAGE_Background_bits, 128, 64, 1);  
   display.display();
 }
+
+// Заставки для функцій
+void functionScreen1() { // Заствка для першої функції
+  display.clearDisplay();
+  display.drawBitmap(5, 21, IMAGE_Folder_bits, 18, 16, 1); 
+  display.drawBitmap(0, 0, IMAGE_Background_bits, 128, 64, 1);  
+  display.display();
+}
