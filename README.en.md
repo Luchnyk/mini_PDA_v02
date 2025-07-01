@@ -1,4 +1,4 @@
-# ESP8266 NodeMCU v3 + Rotary Encoder + OLED I2C
+# Mini PVA v02 Project
 
 This project demonstrates the interaction of the **NodeMCU v3 (ESP8266)** microcontroller with:
 
