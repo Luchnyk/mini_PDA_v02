@@ -11,5 +11,6 @@ void setup() {
 
 void loop() {
   loopEncoder(); // Цикл зчитування енкодера
-  loopFunction(); // Цикл виконання функцій
+  if (flag == 1)
+    loopFunction(); // Цикл виконання функцій
 }

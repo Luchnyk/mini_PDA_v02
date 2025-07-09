@@ -15,7 +15,7 @@ The firmware is written for the **Arduino IDE** and is ideal for IoT application
 | --------------- | ----------------------- |
 | Microcontroller | NodeMCU v3 (ESP8266)    |
 | Display         | OLED 0.96", 128x64, I²C |
-| Rotary Encoder  | KY-040 or without board    |
+| Rotary Encoder  | KY-040 or without board |
 | IDE             | Arduino IDE             |
 
 ---
@@ -38,9 +38,9 @@ The firmware is written for the **Arduino IDE** and is ideal for IoT application
 | CLK         | D5 (GPIO14) |
 | DT          | D6 (GPIO12) |
 | SW (Button) | D7 (GPIO13) |
-| + (if soldered to the board) | 3V3         |
+| +           | 3V3         |
 | GND         | GND         |
-
+> If the encoder is not soldered to the board, then there is no VCC(VDD) contact there.
 > You can change pin assignments in the code if needed.
 
 ---
