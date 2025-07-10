@@ -13,13 +13,13 @@ volatile int lastEncoded = 0;
 volatile int encoderValue = 0; // Значення енкодера
 volatile uint8_t selectionIndex = 0; // Значення обрання опції
 volatile bool stateButton = 0; // Значення статусу кнопки
-volatile int toggleButton = 0; // Значення перемикання кнопки
+volatile bool toggleButton = 0; // Значення перемикання кнопки
 
-int encoderValue_old = 0; // Минуле значення енкодера
-volatile int selectionIndex_old = 3; // Минуле значення обрання опції
-volatile bool stateButton_old = 1; // Минуле значення статусу кнопки
-volatile int toggleButton_old = 0; // Минуле значення перемикання кнопки
-volatile bool flag = 0;
+volatile uint8_t encoderValue_old = 0; // Минуле значення енкодера
+volatile uint8_t selectionIndex_old = 0; // Минуле значення обрання опції
+volatile bool stateButton_old = 0; // Минуле значення статусу кнопки
+volatile bool toggleButton_old = 0; // Минуле значення перемикання кнопки
+volatile bool flag = 1;
 
 // Зчитування напрямку прокручування енкодера
 void IRAM_ATTR updateEncoder() {
@@ -80,13 +80,9 @@ void loopEncoder() {
     Serial.print("Button status: ");
     Serial.println(stateButton);
     // Статус перемикання кнопки
-    toggleButton++;
-    if (toggleButton > 1){
-      toggleButton = 0;
-    }
+    toggleButton = 1;
     Serial.print("Toggle status: ");
     Serial.println(toggleButton);
-    toggleButton_old = !toggleButton;
     flag = 1; 
   }
   stateButton_old = stateButton;
